@@ -1,0 +1,65 @@
+{
+	"name": "vscode-toggle-column-selection",
+	"version": "1.0.6",
+	"displayName": "Toggle Column Selection",
+	"icon": "images/icon.png",
+	"description": "Turn a selection into a column selection à la TextMate",
+	"publisher": "erikphansen",
+	"author": {
+		"name": "Erik P. Hansen"
+	},
+	"maintainers": [
+		"Erik P. Hansen <eph@erikphansen.com>"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/erikphansen/vscode-toggle-column-selection"
+	},
+	"engines": {
+		"vscode": "^1.15.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:toggleColumnSelection.toggle"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "toggleColumnSelection.toggle",
+				"title": "Toggle Column Selection"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "toggleColumnSelection.toggle",
+				"key": "shift+alt+i",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.5.2",
+		"vscode": "^1.1.5",
+		"mocha": "^3.5.0",
+		"eslint": "^4.6.1",
+		"@types/node": "^7.0.0",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "f55b4fbd-3bd7-4bb2-a334-31c9119350b1",
+		"publisherId": "df70b836-fb43-42db-b65a-e3ed3ffbb460",
+		"publisherDisplayName": "Erik P. Hansen",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1650035268712
+	}
+}
